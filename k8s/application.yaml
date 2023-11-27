@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: ghcr.io/dsanchor/demo-dryrun-copilot-sp/demo-dryrun:a747d4f995db4d82a0489d5261ca594c7e13ee8f
+          image: ghcr.io/dsanchor/demo-dryrun-copilot-sp/demo-dryrun:#imageTag#
           ports:
             - containerPort: 8080
 

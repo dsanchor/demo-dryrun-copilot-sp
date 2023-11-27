@@ -50,4 +50,4 @@ jobs:
       run: az aks get-credentials --resource-group ${{ env.AKS_RESOURCE_GROUP }} --name ${{ env.AKS_CLUSTER }}
 
     - name: Deploy to AKS
-      run: kubectl apply -f k8s/application.yaml -n ${{ env.NAMESPACE }}
+      run: sed -i "s/#imageTag#/${{ github.sha }}/g" k8s/application.yaml && kubectl apply -f k8s/
